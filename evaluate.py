@@ -42,26 +42,3 @@ for index, row in results.iterrows():
     elos.loc[away_index, "elo"] = new_away_elo
     
     elos.to_csv("elos.csv", index=False)
-
-
-# with open("internation-football-results/results.csv", mode="r", encoding="utf-8") as resultsFile:
-#     resultsFile = csv.reader(resultsFile)
-#     with open("elos.csv", mode="r", encoding="utf-8", newline="\n") as elosFile:
-#         elosFile = csv.writer(elosFile)
-
-#         for result in resultsFile:
-#             home_team = result[1]
-#             away_team = result[2]
-#             home_score = result[3]
-#             away_score = result[4]
-#             outcome_home = 0.5
-#             outcome_away = 0.5
-
-#             if home_score > away_score:
-#                 outcome_home = 1
-#                 outcome_away = 0
-#             else:
-#                 outcome_home = 0
-#                 outcome_away = 1
-
-#             df = pd.read_csv("elos.csv")
