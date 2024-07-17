@@ -27,7 +27,6 @@ for index, row in results.iterrows():
         away_elo = elos[elos["country"] == away_team]["elo"].to_list()[0]
 
         home_index = elos.index[elos['country'] == home_team].tolist()[0]
-        print(away_team)
         away_index = elos.index[elos['country'] == away_team].tolist()[0]
     except IndexError:
         pass
